@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Витрина товаров</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="active">Витрина</a>
+            <a href="admin.html">Админ-панель</a>
+        </nav>
+        <h1>Товары</h1>
+    </header>
+
+    <main>
+        <!-- Статический пример верстки карточек (для демонстрации) -->
+        <div class="products-grid" id="products-container">
+            <!-- Карточка товара 1 (статический пример) -->
+            <div class="product-card" data-id="1">
+                <img src="https://placehold.co/300x200" alt="Jaket Ilham 181005" loading="lazy">
+                <h3>Jaket Ilham 181005</h3>
+                <p class="price">800 ₽</p>
+                <a href="product.html?id=1" class="btn-details">Подробнее</a>
+            </div>
+
+            <!-- Карточка товара 2 (статический пример) -->
+            <div class="product-card" data-id="2">
+                <img src="https://placehold.co/300x200/ff6b6b/white?text=Товар+2" alt="Пример товара 2" loading="lazy">
+                <h3>Классическая футболка</h3>
+                <p class="price">1200 ₽</p>
+                <a href="product.html?id=2" class="btn-details">Подробнее</a>
+            </div>
+
+            <!-- Карточка товара 3 (статический пример) -->
+            <div class="product-card" data-id="3">
+                <img src="https://placehold.co/300x200/4ecdc4/white?text=Товар+3" alt="Пример товара 3" loading="lazy">
+                <h3>Удобные кроссовки</h3>
+                <p class="price">3500 ₽</p>
+                <a href="product.html?id=3" class="btn-details">Подробнее</a>
+            </div>
+        </div>
+
+        <!-- Элементы пагинации -->
+        <div class="pagination">
+            <button id="prev-page" disabled>← Назад</button>
+            <span id="page-info">Страница 1</span>
+            <button id="next-page">Вперед →</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Учебный проект. Данные загружаются из Platzi Fake Store API</p>
+    </footer>
+
+    <script src="dist/index.js"></script>
+</body>
+</html>

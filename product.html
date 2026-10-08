@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Витрина</a>
+            <a href="admin.html">Админ-панель</a>
+        </nav>
+        <button id="back-button" class="back-btn">← Назад</button>
+    </header>
+
+    <main>
+        <!-- Статический пример верстки товара (для демонстрации) -->
+        <div class="product-detail" id="product-container">
+            <!-- Здесь верстальщик разместил бы готовый пример товара -->
+            <div class="product-image">
+                <img id="product-img" src="https://placehold.co/600x400" alt="Изображение товара">
+            </div>
+            <div class="product-info">
+                <h1 id="product-title">Jaket Ilham 181005</h1>
+                <p class="product-price" id="product-price">800 ₽</p>
+                <p class="product-category" id="product-category">Категория: Clothes</p>
+                <p class="product-description" id="product-description">
+                    Jaket sudah di update. Отличное качество, стильный дизайн.
+                </p>
+            </div>
+        </div>
+
+        <!-- Сообщение об ошибке (скрыто по умолчанию) -->
+        <div id="error-message" class="error-message hidden">
+            <p>Товар не найден</p>
+            <a href="index.html">Вернуться на витрину</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Учебный проект. Данные загружаются из Platzi Fake Store API</p>
+    </footer>
+
+    <script src="dist/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Витрина</a>
+            <a href="admin.html" class="active">Админ-панель</a>
+        </nav>
+        <h1>Управление товарами</h1>
+    </header>
+
+    <main>
+        <!-- Секция: Добавление категории -->
+        <section class="admin-section">
+            <h2>➕ Добавить категорию</h2>
+            <form id="category-form">
+                <div class="form-group">
+                    <label for="cat-name">Название категории *</label>
+                    <input type="text" id="cat-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="cat-image">URL изображения</label>
+                    <input type="url" id="cat-image" placeholder="https://example.com/image.jpg">
+                </div>
+                <button type="submit" class="btn-submit">Создать категорию</button>
+            </form>
+        </section>
+
+        <!-- Секция: Список категорий -->
+        <section class="admin-section">
+            <h2>📁 Существующие категории</h2>
+            <ul id="categories-list" class="categories-list">
+                <!-- Статические примеры категорий -->
+                <li>Clothes</li>
+                <li>Electronics</li>
+                <li>Furniture</li>
+            </ul>
+        </section>
+
+        <!-- Секция: Добавление товара -->
+        <section class="admin-section">
+            <h2>🛍️ Добавить товар (свой)</h2>
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="prod-title">Название *</label>
+                    <input type="text" id="prod-title" required placeholder="MY_Название товара">
+                </div>
+                <div class="form-group">
+                    <label for="prod-price">Цена *</label>
+                    <input type="number" id="prod-price" required step="1" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="prod-desc">Описание</label>
+                    <textarea id="prod-desc" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="prod-category">Категория *</label>
+                    <select id="prod-category" required>
+                        <option value="">-- Выберите категорию --</option>
+                        <option value="1">Clothes</option>
+                        <option value="2">Electronics</option>
+                        <option value="3">Furniture</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="prod-image">URL изображения</label>
+                    <input type="url" id="prod-image" placeholder="https://placehold.co/600x400">
+                </div>
+                <button type="submit" class="btn-submit">Добавить товар</button>
+            </form>
+        </section>
+
+        <!-- Секция: Список всех товаров -->
+        <section class="admin-section">
+            <h2>📦 Все товары</h2>
+            <div id="products-table-container">
+                <table class="products-table" id="products-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Название</th>
+                            <th>Цена</th>
+                            <th>Действие</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-list">
+                        <!-- Статические примеры товаров -->
+                        <tr data-id="1">
+                            <td>1</td>
+                            <td>Jaket Ilham 181005</td>
+                            <td>800 ₽</td>
+                            <td><button class="btn-delete" data-id="1">Удалить</button></td>
+                        </tr>
+                        <tr data-id="2">
+                            <td>2</td>
+                            <td>Классическая футболка</td>
+                            <td>1200 ₽</td>
+                            <td><button class="btn-delete" data-id="2">Удалить</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Учебный проект. API полностью открыт, авторизация не требуется</p>
+    </footer>
+
+    <script src="dist/admin.js"></script>
+</body>
+</html>
